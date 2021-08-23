@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-const createLargeArrayOfNumbers = (length: number, max: number) => {
+export const createLargeArrayOfNumbers = (length: number, max: number) => {
   const largeArr = [];
   for (let i = 0; i<length; i++){
     const randomNum = Math.floor(Math.random() * max);
@@ -14,8 +14,13 @@ const max = parseInt(process.argv[3]) || 100_000;
 
 const largeArr = createLargeArrayOfNumbers(length, max);
 
-const jsonArr = JSON.stringify({
-  numberArr: largeArr
-});
+export const writeToJSON = (data: number[]) => {
+  const jsonArr = JSON.stringify({
+    numberArr: data
+  });
+  
+  fs.writeFileSync('../data.json', jsonArr);
+};
 
-fs.writeFileSync('../data.json', jsonArr);
+writeToJSON(largeArr);
+
