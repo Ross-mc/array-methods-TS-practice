@@ -9,11 +9,13 @@ const createLargeArrayOfNumbers = (length: number, max: number) => {
   return largeArr;
 }
 
-const length = +process.argv[2] || 1_000_000;
-const max = +process.argv[3] || 100_000;
+const length = parseInt(process.argv[2]) || 1_000_000;
+const max = parseInt(process.argv[3]) || 100_000;
 
 const largeArr = createLargeArrayOfNumbers(length, max);
 
-const jsonArr = JSON.stringify(largeArr);
+const jsonArr = JSON.stringify({
+  numberArr: largeArr
+});
 
 fs.writeFileSync('../data.json', jsonArr);

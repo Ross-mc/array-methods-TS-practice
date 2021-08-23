@@ -4,7 +4,8 @@
   "description": "",
   "main": "every.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "createArray": "npx tsc && cd build && node createArray"
   },
   "keywords": [],
   "author": "",
