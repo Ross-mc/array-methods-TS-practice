@@ -1,6 +1,5 @@
 import {customMap} from "../map";
-import { strArr, numberArr, multiplyByFive } from "../helpers";
-import {mapCallback} from "../types";
+import { numberArr, multiplyByFive } from "../helpers";
 
 describe('customMap.ts', () => {
   it('should call the callback function for each element in the array', () => {

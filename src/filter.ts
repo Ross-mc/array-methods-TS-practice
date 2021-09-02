@@ -1,7 +1,6 @@
-import {numberArr, strArr} from './helpers';
-import {filterCallback} from "./types"
+import {booleanCallback} from "./types"
 
-export const customFilter = <T>(arr: T[], cb: filterCallback<T>) => {
+export const customFilter = <T>(arr: T[], cb: booleanCallback<T>) => {
   const resultArr = [];
   for (let idx = 0; idx < arr.length; idx++) {
     const value = arr[idx];
