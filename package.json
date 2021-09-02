@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "createArray": "npx tsc && cd build && node createArray",
-    "benchmark": "npx tsc && cd build && node index.js"
+    "benchmark": "npx tsc && cd build && node index.js",
+    "build": "npx tsc"
   },
   "keywords": [],
   "author": "",
